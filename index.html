@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G-Medix | Verificación de Certificado Médico</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f4f6f9; color: #1a1a2e; min-height: 100vh; }
+  .header { background: linear-gradient(135deg, #0f3d5c, #1a6b8a); color: white; padding: 28px 24px; text-align: center; }
+  .header h1 { font-size: 22px; font-weight: 600; letter-spacing: 0.3px; }
+  .header span { font-size: 13px; opacity: 0.8; display: block; margin-top: 4px; }
+  .container { max-width: 680px; margin: 32px auto; padding: 0 16px; }
+  .card { background: white; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 28px 30px; margin-bottom: 20px; }
+  .card.verified { border-left: 4px solid #22c55e; }
+  .badge { display: inline-flex; align-items: center; gap: 7px; background: #dcfce7; color: #166534; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 20px; }
+  .badge .dot { width: 9px; height: 9px; background: #22c55e; border-radius: 50%; }
+  .field { margin-bottom: 18px; }
+  .field label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: #6b7280; font-weight: 600; display: block; margin-bottom: 4px; }
+  .field .value { font-size: 16px; color: #111827; font-weight: 500; }
+  .field .value.highlight { font-size: 18px; font-weight: 700; color: #0f3d5c; }
+  .divider { border: none; border-top: 1px solid #e5e7eb; margin: 22px 0; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .doctor { background: #f8fafc; border-radius: 8px; padding: 20px; margin-top: 8px; }
+  .doctor .name { font-size: 17px; font-weight: 700; color: #0f3d5c; }
+  .doctor .spec { font-size: 13px; color: #1a6b8a; font-weight: 500; margin-top: 2px; }
+  .doctor .creds { font-size: 12px; color: #6b7280; margin-top: 8px; line-height: 1.6; }
+  .footer { text-align: center; padding: 20px; font-size: 12px; color: #9ca3af; }
+  .report-id { font-family: 'SF Mono', 'Menlo', 'Consolas', monospace; font-size: 12px; color: #9ca3af; text-align: right; margin-top: 20px; }
+  .stamp { text-align: center; margin: 16px 0; }
+  .stamp img { opacity: 0.15; width: 120px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>G-Medix</h1>
+  <span>Portal de Verificación de Documentos Médicos</span>
+</div>
+
+<div class="container">
+  <div class="card verified">
+    <div class="badge"><span class="dot"></span> Certificado Verificado</div>
+
+    <div class="field">
+      <label>Reporte No.</label>
+      <div class="value">978</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="field">
+      <label>Tipo de Documento</label>
+      <div class="value highlight">CERTIFICADO MÉDICO DE REPOSO</div>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <label>Fecha de Emisión</label>
+        <div class="value">20 de octubre de 2026</div>
+      </div>
+      <div class="field">
+        <label>Lugar de Emisión</label>
+        <div class="value">San Cristóbal, Venezuela</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="field">
+      <label>Paciente</label>
+      <div class="value">Francesco Antonio Buttaci Ramirez</div>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <label>Documento de Identidad</label>
+        <div class="value">31.181.082</div>
+      </div>
+      <div class="field">
+        <label>Diagnóstico</label>
+        <div class="value">Rehabilitación y Observación</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Período de Reposo Prescrito</label>
+      <div class="value highlight">50 días</div>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <label>Desde</label>
+        <div class="value">1 de septiembre de 2026</div>
+      </div>
+      <div class="field">
+        <label>Hasta</label>
+        <div class="value">20 de octubre de 2026</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="doctor">
+      <div class="name">Dr. Luis Guillermo Molina Ortiz</div>
+      <div class="spec">Neurocirugía / Neuro-Oncología</div>
+      <div class="creds">
+        C.I. V-17.528.828 &nbsp;|&nbsp; MPPS 90954 &nbsp;|&nbsp; CM CMT-4447<br>
+        Av. 19 de Abril, Edif. Policlínica Táchira, Torre 3, Piso 6, Cons. 12<br>
+        Tel: 0276-3490624 / 0414-7483070 / 0414-7056267
+      </div>
+    </div>
+
+    <div class="report-id">hash: 56fa3845a6c0 &nbsp;|&nbsp; verificado: 20/10/2026 09:14 UTC</div>
+  </div>
+</div>
+
+<div class="footer">
+  G-Medix &mdash; Sistema de Verificación de Certificados Médicos
+</div>
+
+</body>
+</html>
